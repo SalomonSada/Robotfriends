@@ -6,9 +6,10 @@ import Scroll from '../components/Scroll';
 import { setSearchField, requestBots } from '../redux/actions';
 
 const App = (props) => {
+  const { onRequestRobots } = props;
   useEffect(() => {
-    props.onRequestRobots();
-  }, [props.onRequestRobots]);
+    onRequestRobots();
+  }, [onRequestRobots]);
 
   const { onSearchChange, searchField, robots, isPending } = props;
 
